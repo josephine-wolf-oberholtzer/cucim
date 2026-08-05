@@ -10,7 +10,7 @@ package_dir="python/cucim"
 CMAKE_BUILD_TYPE="release"
 
 source rapids-configure-sccache
-source rapids-date-string
+source rapids-datetime-string
 source rapids-init-pip
 
 sccache --stop-server 2>/dev/null || true
@@ -21,7 +21,8 @@ export SCCACHE_S3_USE_PREPROCESSOR_CACHE_MODE="true"
 
 sccache --start-server
 
-rapids-generate-version > ./VERSION
+RAPIDS_VERSION_SUFFIX=".post${RAPIDS_DATETIME_STRING}" \
+  rapids-generate-version > ./VERSION
 
 rapids-logger "Generating build requirements"
 
