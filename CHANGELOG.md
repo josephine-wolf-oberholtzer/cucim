@@ -1,3 +1,26 @@
+# cucim 26.08.00 (5 Aug 2026)
+
+### 🚨 Breaking Changes
+* Use static linkage for CUDA runtime by @bdice in https://github.com/rapidsai/cucim/pull/992
+### 🐛 Bug Fixes
+* Replace `shape` assignment with `reshape` calls by @jakirkham in https://github.com/rapidsai/cucim/pull/1106
+* add large image support to `cucim.skimage.measure.label` (support 64-bit indexing) by @grlee77 in https://github.com/rapidsai/cucim/pull/1087
+### 📖 Documentation
+* Update docs to use NVIDIA Sphinx theme by @bdice in https://github.com/rapidsai/cucim/pull/1112
+### 🛠️ Improvements
+* Add SECURITY.md by @jameslamb in https://github.com/rapidsai/cucim/pull/1093
+* fix(ci): fix configuration for breaking change notification workflow by @jameslamb in https://github.com/rapidsai/cucim/pull/1098
+* refactor: switch to `rapids-artifact-name` for consistent artifact naming by @gforsyth in https://github.com/rapidsai/cucim/pull/1091
+* Build and test with CUDA 13.3.0 by @bdice in https://github.com/rapidsai/cucim/pull/1102
+* Use main shared-workflows branch by @bdice in https://github.com/rapidsai/cucim/pull/1103
+* Update CuPy and NumPy dependency specs by @bdice in https://github.com/rapidsai/cucim/pull/1104
+* fix(deps): preload `cusolver` if `cupy` is installed by @gforsyth in https://github.com/rapidsai/cucim/pull/1117
+* `regionprops_table` output placement and format by @grlee77 in https://github.com/rapidsai/cucim/pull/1088
+* cuslide2: add pyramidal OME-TIFF semantics and nvImageCodec 0.9 readiness by @cdinea in https://github.com/rapidsai/cucim/pull/1122
+
+
+**Full Changelog**: https://github.com/rapidsai/cucim/compare/v26.08.00a...release/26.08
+
 # cucim 26.06.00 (3 Jun 2026)
 
 ### 🚨 Breaking Changes
